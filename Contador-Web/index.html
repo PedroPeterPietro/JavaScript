@@ -4,18 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Contador</title>
 </head>
 
 <body>
-    <h1>Olá, mundo!</h1>
-    <p>Este é o meu primeiro projeto Javascript.</p>
-    <div id="counter">
-        <button name="subtrair" onclick="decrement()">-</button>
-        <span id="currentNumber">0</span>
-        <button name="adicionar" onclick="increment()">+</button>
-    </div>
+    <section class="Intro">
+        <h1>Contadores Desenvolvidos</h1>
+        <p>Para meu primeiro projeto com script js, desenvolvi diversos contadores.</p>
+    </section>
+    <section class="contadores">
+
+        <!-- Contador Real -->
+        <div class="counter1">
+            <h3>Contador de 0 a 10:</h3>
+            <button name="subtrair1" onclick="decrement1()">-</button>
+            <span id="currentNumber1">0</span>
+            <button name="adicionar1" onclick="increment1()">+</button>
+        </div>
+
+        <!-- Contador de números Naturais -->
+        <div class="counter2">
+            <h3>Contador de números Inteiros:</h3>
+            <button name="subtrair2" onclick="decrement2()">-</button>
+            <span id="currentNumber2">0</span>
+            <button name="adicionar2" onclick="increment2()">+</button>
+        </div>
+
+        <!-- Contador de números múltiplos de 2 -->
+        <div class="counter3">
+            <h3>Contador de números Múltiplos de 2:</h3>
+            <button name="subtrair3" onclick="decrement3()">-</button>
+            <span id="currentNumber3">0</span>
+            <button name="adicionar3" onclick="increment3()">+</button></div>
+
+        <!-- Contador números multiplos de 3 -->
+        <div class="counter4">
+            <h3>Contador de números Múltiplos de 3:</h3>
+            <button name="subtrair4" onclick="decrement4()">-</button>
+            <span id="currentNumber4">0</span>
+            <button name="adicionar4" onclick="increment4()">+</button>
+        </div>
+    </section>
+    <footer><a href="https://github.com/PedroPeterPietro">Meu Github</a></footer>
     <script src="assets/js/script.js"></script>
 </body>
 
