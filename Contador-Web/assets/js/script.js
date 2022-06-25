@@ -1,77 +1,97 @@
-var currentNumberWrapper1 = document.getElementById("currentNumber1"); //Numero Real
-var currentNumber1 = 0;
-var currentNumberWrapper2 = document.getElementById("currentNumber2"); //Numero Natural
-var currentNumber2 = 0;
-var currentNumberWrapper3 = document.getElementById("currentNumber3"); //Numero Real
-var currentNumber3 = 0;
-var currentNumberWrapper4 = document.getElementById("currentNumber4"); //Numero Natural
-var currentNumber4 = 0;
+var currentNumberWrapper = [document.getElementById("currentNumber1"), document.getElementById("currentNumber2"), document.getElementById("currentNumber3"), document.getElementById("currentNumber4")];
+let currentNumber = [0, 0, 0, 0];
+var i;
 
+//Função que incrementa +1 no primeiro contador
 function increment1() {
-    if (currentNumber1 == 10) {
-        return;
-    } else {
-        currentNumber1 = currentNumber1 + 1;
-        currentNumberWrapper1.innerHTML = currentNumber1;
-    }
+    i = 0;
+    currentNumber[0]++;
+    currentNumberWrapper[i].innerHTML = currentNumber[0];
+    verficarLimite();
 
 }
-
+//função que decrementa -1 no primeiro contador
 function decrement1() {
-    if (currentNumber1 == 0) {
-        return;
-    } else {
-        currentNumber1 = currentNumber1 - 1;
-        currentNumberWrapper1.innerHTML = currentNumber1;
+    i = 0;
 
-    }
+    currentNumber[0]--;
+    verficarLimite();
+    currentNumberWrapper[i].innerHTML = currentNumber[0];
 
 }
 
-function changeColor() {
-    if (currentNumber2 < 0) {
-        document.getElementById("currentNumber2").style.color = "red";
+//Função que verificar os limites <= 0 e >= 10 do count
+function verficarLimite() {
+    if (currentNumber[0] >= 10) {
+        return currentNumber[0]--;
+    }
+    if (currentNumber[0] < 0) {
+        return currentNumber[0]++;
+    }
+}
+
+//Função que verificar se será preciso mudar a cor do elemento
+
+function changeColor(i) {
+    if (currentNumber[i] < 0) {
+        currentNumberWrapper[i].style.color = "red";
 
     } else {
-        document.getElementById("currentNumber2").style.color = "royalblue";
+        currentNumberWrapper[i].style.color = "royalblue";
     }
 }
 
 
 
+//Função que incrementa +1 no segundo contador
 
 function increment2() {
-    currentNumber2 = currentNumber2 + 1;
-    currentNumberWrapper2.innerHTML = currentNumber2;
-    changeColor();
+    i = 1;
+    currentNumber[1] = currentNumber[1] + 1;
+    currentNumberWrapper[i].innerHTML = currentNumber[1];
+    changeColor(i);
 }
+//função que decrementa -1 no segundo contador
 
 function decrement2() {
-    currentNumber2 = currentNumber2 - 1;
-    currentNumberWrapper2.innerHTML = currentNumber2;
-    changeColor();
+    i = 1;
+    currentNumber[1] = currentNumber[1] - 1;
+    currentNumberWrapper[i].innerHTML = currentNumber[1];
+    changeColor(i);
 
 }
+//Função que incrementa +2 no terceiro contador
 
 function increment3() {
-    currentNumber3 = currentNumber3 + 2;
-    currentNumberWrapper3.innerHTML = currentNumber3;
+    i = 2;
+    currentNumber[2] = currentNumber[2] + 2;
+    currentNumberWrapper[2].innerHTML = currentNumber[2];
+    changeColor(i);
 }
+//função que decrementa -2 no terceiro contador
 
 function decrement3() {
-    currentNumber3 = currentNumber3 - 2;
-    currentNumberWrapper3.innerHTML = currentNumber3;
+    i = 2;
+    currentNumber[2] = currentNumber[2] - 2;
+    currentNumberWrapper[2].innerHTML = currentNumber[2];
+    changeColor(i);
 
 }
 
+//Função que incrementa +3 no quarto contador
 
 function increment4() {
-    currentNumber4 = currentNumber4 + 3;
-    currentNumberWrapper4.innerHTML = currentNumber4;
+    i = 3;
+    currentNumber[3] = currentNumber[3] + 3;
+    currentNumberWrapper[3].innerHTML = currentNumber[3];
+    changeColor(i);
 }
+//função que decrementa -3 no quarto contador
 
 function decrement4() {
-    currentNumber4 = currentNumber4 - 3;
-    currentNumberWrapper4.innerHTML = currentNumber4;
+    i = 3;
+    currentNumber[3] = currentNumber[3] - 3;
+    currentNumberWrapper[3].innerHTML = currentNumber[3];
+    changeColor(i);
 
 }
