@@ -1,0 +1,14 @@
+* {
+    color: royalblue;
+    background-color: whitesmoke;
+}
+
+.intro {
+    text-align: center;
+}
+
+.introdução {
+    border: 2px solid black;
+    margin: 50px;
+    padding: 50px;
+}
