@@ -1,0 +1,1 @@
+Foi implementado um mini sistema para verificar se o número é par ou impar
